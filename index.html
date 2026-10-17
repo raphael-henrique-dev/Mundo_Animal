@@ -4,35 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  </head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+</head>
     <title>Mundo Animal</title>
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 
-    <div class="container">
-        <h1 class="card bg-primary text-white text-center my-4">Mundo Animal</h1>
-        <div class="row">
-            <div class="col-md-6">
-                <h2>Bem-vindo ao PetShop Mundo Animal</h2>
-                <ul class="nav nav-pills">
-                    <li class="nav-item">
-                        <a class="btn btn-outline nav-link" href="#">Saiba Mais</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-outline nav-link" href="#">Configurações</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-outline nav-link" href="#">Ajuda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-outline  nav-link" href="#">Visão Geral</a>
-                    </li>
-                </ul>
+    <!-- card header / titulo -->
+    <div class="container-fluid p-0">
+        <div class="card w-full bg-danger border border-dark border-1 rounded-0 text-light text-centermy-0">
+            
+            <div class="card-body d-flex justfify-content-between align-items-center">
+
+                <!-- titulo e subtitulo -->
+                <div class="text-center w-100">
+                    <h1 class="card-title">Mundo Animal</h1>
+                    <p class="card-text mb-0">O melhor lugar para cuidar do seu pet!</p>
+                </div>
+                <!------------------------->
+
+
+                <!--icones redes-->
+                <div class="ms-auto">
+                    <p class="mb-0 text-right">Siga nossas redes sociais</p>
+                    
+                    <div class="d-flex gap-3 justify-content align-items ">
+
+                        <!-- icone whatsapp -->
+                        <a href="https://wa.me/SEUNUMERO"
+                        class="text-light"
+                        target="_blank"
+                        aria-label="WhatsApp">
+                            <i class="bi bi-whatsapp fs-3"></i>
+                        </a>
+
+                        <!-- icone instagram -->
+                        <a href="https://instagram.com/SEUUSUARIO"
+                        class="text-light"
+                        target="_blank"
+                        aria-label="Instagram">
+                            <i class="bi bi-instagram fs-3"></i>
+                        </a>
+
+                        <!-- icone facebook -->
+                        <a href="https://facebook.com/SEUPERFIL"
+                        class="text-light"
+                        target="_blank"
+                        aria-label="Facebook">
+                            <i class="bi bi-facebook fs-3"></i>
+                        </a>
+
+                    </div>
+                </div>
+                <!------------------------->
+
             </div>
         </div>
-        
     </div>
+    <!--fim card header-->
+
+    <!--section / hero-->
+    <section class="hero-section">
+        <div class="container-fluid p-0">
+            <div class="card w-full bg-light border border-dark border-2 rounded-0 text-dark text-center my-0">
+                <div class="card-body d-flex justify-content-between align-items-center">
+
+                    <!-- imagem hero -->
+                    <div class="col-md-6">
+                        <img src="assets/foto-cacau.jpeg" alt="Imagem Hero" class="img-fluid rounded" style="max-height: 400px; max-width: 100%; width: 100%;">
+                    </div>
+                    <!------------------------->
+
+                    <!-- texto hero -->
+                    <div class="col-md-5 px-2.5 d-flex flex-column justify-content-center">
+                        <h2 class="card-title">Cuidando do seu pet com amor e dedicação</h2>
+                        <p class="card-text">isso era/é pra ser um hero.</p>
+                    </div>
+                    <!------------------------->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--fim section / hero-->
+
+
+
+    <!-- card body / conteudo -->
+
+    <div class="row align-items-center justify-content-center my-5">
+        <div class="col-md-6">
+            <h2 class="text-center">Bem-vindo ao PetShop Mundo Animal</h2>
+            <ul class="nav nav-pills p-2 gap-2 flex-column">
+                <li class="nav-item">
+                    <a class="btn btn-outline nav-link bg-primary text-white" href="#">Área do Cliente</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-outline nav-link bg-primary text-white" href="#">Área do Funcionário</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-outline nav-link bg-primary text-white" href="#">Área do Animal</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-outline nav-link bg-primary text-white" href="#">Relatórios</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+        
 
     
 
