@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Animal | Página institucional</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-</head>
-    <title>Mundo Animal</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
@@ -21,7 +20,7 @@
 
                 <!-- titulo e subtitulo -->
                 <div class="text-center w-100">
-                    <a href="/" class="text-decoration-none text-light">
+                    <a href="../../index.html" class="text-decoration-none text-light">
                     <h1 class="card-title">Mundo Animal</h1>
                     <p class="card-text mb-0">O melhor lugar para cuidar do seu pet!</p>
                     </a>
@@ -31,7 +30,7 @@
 
                 <!--logo mundo animal-->
                 <div id="logo" class="position-absolute top-50 start-0 translate-middle-y px-5">
-                    <img src="assets/logo.webp" alt="Logo Mundo Animal" class="img-fluid" style="max-height: 80px;">
+                    <img src="../../assets/logo.webp" alt="Logo Mundo Animal" class="img-fluid" style="max-height: 80px;">
                 </div>
 
 
@@ -90,34 +89,33 @@
     <!--fim card header-->
 
     <!-- menu de navegacao -->
-    <nav class="navbar bg-light border-bottom border-dark overflow-auto" aria-label="Navegacao principal">
-        <div class="container-fluid justify-content-center">
-            <ul class="navbar-nav d-flex flex-row flex-nowrap justify-content-center gap-2 mx-auto" style="width: max-content;">
-                <li class="nav-item">
-                    <button class="nav-link btn-custom-1 text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='/'">Inicio</button>
-                </li>
-                <li class="nav-item">
-                    <button class="nav-link btn-custom-1 text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='#servicos'">Servicos</button>
-                </li>
-                <li class="nav-item">
-                    <button class="nav-link btn-custom-1 text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='#cachorros'">Cachorros</button>
-                </li>
-                <li class="nav-item">
-                    <button class="nav-link btn-custom-1 text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='#gatos'">Gatos</button>
-                </li>
-                <li class="nav-item">
-                    <button class="nav-link btn-custom-1 text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='#passaros'">Pássaros</button>
-                </li>
-                <li class="nav-item">
-                    <button class="nav-link btn-custom-1 text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='#aquarios&peixes'">Aquários / Peixes</button>
-                </li>
-                <li class="nav-item">
-                    <button class="nav-link btn-custom-1 text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='#sobre'">Sobre nós</button>
-                </li>
-                <li class="nav-item">
-                    <button class="nav-link btn-custom-1 text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='#contato'">Contato</button>
-                </li>
-            </ul>
+    <nav class="navbar navbar-light bg-light border-end border-bottom border-dark" aria-label="Navegacao principal">
+        <div class="container-fluid flex-column">
+            <button class="navbar-toggler mx-auto border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Expandir ou ocultar menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse w-100" id="menuPrincipal">
+                <ul class="navbar-nav flex-column align-items-stretch gap-2">
+                    <li class="nav-item">
+                        <button class="nav-link btn-custom-1 text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='../../index.html'">Início</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link btn-custom-1 text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='#cliente'">Cliente</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link btn-custom-1 text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='#funcionario'">Funcionário</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link btn-custom-1 text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='#atendimento'">Atendimento</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link btn-custom-1 text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='#relatorios'">Relatórios</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link btn-custom-1 text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='views/institucional/inicio.html'">Página Institucional</button>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -132,21 +130,21 @@
   <div class="carousel-inner w-100 h-50">
 
     <div class="carousel-item active">
-      <img src="assets/place-h1.svg" class="d-block w-100 carousel-img" alt="...">
+      <img src="../../assets/place-h1.svg" class="d-block w-100 carousel-img" alt="Banner institucional 1">
       <div class="carousel-caption d-none d-md-block">
             <h5>Lorem ipsum</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="assets/place-h2.svg" class="d-block w-100 carousel-img" alt="...">
+      <img src="../../assets/place-h2.svg" class="d-block w-100 carousel-img" alt="Banner institucional 2">
       <div class="carousel-caption d-none d-md-block">
             <h5>Lorem ipsum</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="assets/place-h3.svg" class="d-block w-100 carousel-img" alt="...">
+      <img src="../../assets/place-h3.svg" class="d-block w-100 carousel-img" alt="Banner institucional 3">
       <div class="carousel-caption d-none d-md-block">
             <h5>Lorem ipsum</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
