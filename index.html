@@ -100,26 +100,69 @@
         </div>
     </nav>
 
+    <!-- corpo com graficos e métricas -->
     <main class="container-fluid py-4">
         <div class="row g-3">
             <div class="col-12 col-md-6 col-xl-3">
-                <section class="border border-dark rounded p-3 h-100" style="min-height: clamp(420px, 100vh, 70px);">
-                    <h2 class="h5">Gráficos</h2>
+                <section class="border border-dark rounded p-3 h-100" style="min-height: clamp(420px, 100vh, 700px);">
+                    <h2 class="h5 mb-3">Gráficos</h2>
+                    <div class="d-flex justify-content-between align-items-end gap-2" style="height: 220px;">
+                        <div class="text-center flex-fill">
+                            <div class="bg-danger rounded-top" style="height: 48%;" title="Janeiro: 48 atendimentos"></div>
+                            <small>Jan</small>
+                        </div>
+                        <div class="text-center flex-fill">
+                            <div class="bg-danger rounded-top" style="height: 65%;" title="Fevereiro: 65 atendimentos"></div>
+                            <small>Fev</small>
+                        </div>
+                        <div class="text-center flex-fill">
+                            <div class="bg-danger rounded-top" style="height: 82%;" title="Março: 82 atendimentos"></div>
+                            <small>Mar</small>
+                        </div>
+                        <div class="text-center flex-fill">
+                            <div class="bg-danger rounded-top" style="height: 72%;" title="Abril: 72 atendimentos"></div>
+                            <small>Abr</small>
+                        </div>
+                    </div>
+                    <p class="text-muted small mt-3 mb-0"><i class="bi bi-bar-chart-fill"></i> Atendimentos por mês</p>
                 </section>
             </div>
             <div class="col-12 col-md-6 col-xl-3">
                 <section class="border border-dark rounded p-3 h-100" style="min-height: clamp(420px, 100vh, 700px);">
                     <h2 class="h5">Faturamento</h2>
+                    <p class="display-6 fw-bold text-success mb-1">R$ 18.450</p>
+                    <p class="small text-success"><i class="bi bi-arrow-up"></i> 12,4% este mês</p>
+                    <hr>
+                    <div class="d-flex justify-content-between small mb-2"><span>Consultas</span><strong>R$ 11.200</strong></div>
+                    <div class="progress mb-3" style="height: 10px;"><div class="progress-bar bg-success" style="width: 61%"></div></div>
+                    <div class="d-flex justify-content-between small mb-2"><span>Procedimentos</span><strong>R$ 7.250</strong></div>
+                    <div class="progress" style="height: 10px;"><div class="progress-bar bg-info" style="width: 39%"></div></div>
                 </section>
             </div>
             <div class="col-12 col-md-6 col-xl-3">
                 <section class="border border-dark rounded p-3 h-100" style="min-height: clamp(420px, 100vh, 700px);">
                     <h2 class="h5">Atendimentos no mês</h2>
+                    <p class="display-4 fw-bold text-primary mb-0">267</p>
+                    <p class="text-muted small">atendimentos realizados</p>
+                    <div class="row g-2 mt-4">
+                        <div class="col-6"><div class="bg-light rounded p-2"><small>Hoje</small><strong class="d-block">18</strong></div></div>
+                        <div class="col-6"><div class="bg-light rounded p-2"><small>Agendados</small><strong class="d-block">24</strong></div></div>
+                        <div class="col-6"><div class="bg-light rounded p-2"><small>Concluídos</small><strong class="d-block">231</strong></div></div>
+                        <div class="col-6"><div class="bg-light rounded p-2"><small>Cancelados</small><strong class="d-block">12</strong></div></div>
+                    </div>
                 </section>
             </div>
             <div class="col-12 col-md-6 col-xl-3">
                 <section class="border border-dark rounded p-3 h-100" style="min-height: clamp(420px, 100vh, 700px);">
                     <h2 class="h5">Status</h2>
+                    <div class="d-flex align-items-center justify-content-center my-4">
+                        <div class="rounded-circle d-flex align-items-center justify-content-center" style="width: 150px; height: 150px; background: conic-gradient(#198754 0 72%, #ffc107 72% 90%, #dc3545 90% 100%);">
+                            <div class="rounded-circle bg-white d-flex flex-column align-items-center justify-content-center" style="width: 105px; height: 105px;"><strong class="fs-4">72%</strong><small>ativos</small></div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between small mb-2"><span><i class="bi bi-circle-fill text-success"></i> Ativos</span><strong>72%</strong></div>
+                    <div class="d-flex justify-content-between small mb-2"><span><i class="bi bi-circle-fill text-warning"></i> Pendentes</span><strong>18%</strong></div>
+                    <div class="d-flex justify-content-between small"><span><i class="bi bi-circle-fill text-danger"></i> Inativos</span><strong>10%</strong></div>
                 </section>
             </div>
         </div>
