@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <title>Mundo Animal</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    <!-- card header / titulo -->
+    <div class="container-fluid p-0">
+        <div class="card w-full bg-danger border border-dark border-1 rounded-0 text-light text-centermy-0">
+            
+            <div class="card-body d-flex justify-content-between align-items-center position-relative">
+
+                <!-- titulo e subtitulo -->
+                <div class="text-center w-100">
+                    <a href="/" class="text-decoration-none text-light">
+                    <h1 class="card-title">Mundo Animal</h1>
+                    <p class="card-text mb-0">O melhor lugar para cuidar do seu pet!</p>
+                    </a>
+                </div>
+                <!------------------------->
+
+
+                <!--logo mundo animal-->
+                <div id="logo" class="position-absolute top-50 start-0 translate-middle-y px-5">
+                    <img src="../../assets/logo.webp" alt="Logo Mundo Animal" class="img-fluid" style="max-height: 80px;">
+                </div>
+
+
+                <div id="campoPesquisa" class="position-absolute top-50 translate-middle" style="left: 75%">
+                    <form class="d-flex" role="search" aria-label="Campo de pesquisa">
+                        <input class="form-control me-2 rounded-pill" type="search" placeholder="Buscar no sistema..." aria-label="Pesquisar" style="width: 400px;">
+                        <!-- <button class="btn btn-outline-light" type="submit">Pesquisar</button> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--fim card header-->
+
+    <!-- menu de navegacao -->
+    <nav class="navbar navbar-light bg-light border-end border-bottom border-dark" aria-label="Navegacao principal">
+        <div class="container-fluid flex-column">
+            <button class="navbar-toggler mx-auto border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Expandir ou ocultar menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse w-100" id="menuPrincipal">
+                <ul class="navbar-nav flex-column align-items-stretch gap-2">
+                    <li class="nav-item">
+                        <button class="nav-link btn-custom-1 text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='../../index.html'">Início</button>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button id="menuCliente" class="nav-link dropdown-toggle btn-custom-1 text-dark px-3 bg-transparent border-0 rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">Cliente</button>
+                        <ul class="dropdown-menu bg-transparent border-0" aria-labelledby="menuCliente">
+                            <li><a class="dropdown-item" href="../../views/cliente/cadastro.html">● Cadastro de Cliente</a></li>
+                            <li><a class="dropdown-item" href="../../views/cliente/consulta.html">● Consulta de Cliente</a></li>
+                            <li><a class="dropdown-item" href="../../views/cliente/alteração.html">● Alteração de Cliente</a></li>
+                            <li><a class="dropdown-item" href="../../views/cliente/remoção.html">● Remoção de Cliente</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button id="menuFuncionario" class="nav-link dropdown-toggle btn-custom-1 text-dark px-3 bg-transparent border-0 rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">Funcionário</button>
+                        <ul class="dropdown-menu bg-transparent border-0" aria-labelledby="menuFuncionario">
+                            <li><a class="dropdown-item" href="../../views/funcionario/cadastro.html">● Cadastro de Funcionário</a></li>
+                            <li><a class="dropdown-item" href="../../views/funcionario/consulta.html">● Consulta de Funcionário</a></li>
+                            <li><a class="dropdown-item" href="../../views/funcionario/alteração.html">● Alteração de Funcionário</a></li>
+                            <li><a class="dropdown-item" href="../../views/funcionario/remoção.html">● Remoção de Funcionário</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button id="menuAtendimento" class="nav-link dropdown-toggle btn-custom-1 text-dark px-3 bg-transparent border-0 rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">Atendimento</button>
+                        <ul class="dropdown-menu bg-transparent border-0" aria-labelledby="menuAtendimento">
+                            <li><a class="dropdown-item" href="../../views/atendimento/cadastro.html">● Cadastro de Atendimento</a></li>
+                            <li><a class="dropdown-item" href="../../views/atendimento/consulta.html">● Consulta de Atendimento</a></li>
+                            <li><a class="dropdown-item" href="../../views/atendimento/alteração.html">● Alteração de Atendimento</a></li>
+                            <li><a class="dropdown-item" href="../../views/atendimento/remoção.html">● Remoção de Atendimento</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button id="menuAnimal" class="nav-link dropdown-toggle btn-custom-1 text-dark px-3 bg-transparent border-0 rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">Animal</button>
+                        <ul class="dropdown-menu bg-transparent border-0" aria-labelledby="menuAnimal">
+                            <li><a class="dropdown-item" href="../../views/animal/cadastro.html">● Cadastro de Animal</a></li>
+                            <li><a class="dropdown-item" href="../../views/animal/consulta.html">● Consulta de Animal</a></li>
+                            <li><a class="dropdown-item" href="../../views/animal/alteração.html">● Alteração de Animal</a></li>
+                            <li><a class="dropdown-item" href="../../views/animal/remoção.html">● Remoção de Animal</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link btn-custom-1 text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='views/institucional/inicio.html'">Página Institucional</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1>Página em construção</h1>
