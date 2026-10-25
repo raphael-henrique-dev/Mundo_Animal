@@ -14,7 +14,7 @@
 
     <!-- card header / titulo -->
     <div class="container-fluid p-0">
-        <div class="card w-full bg-danger border border-dark border-1 rounded-0 text-light text-centermy-0">
+        <div class="card w-full bg-danger border border-dark border-0 rounded-0 text-light text-centermy-0">
             
             <div class="card-body d-flex justify-content-between align-items-center position-relative">
 
@@ -30,11 +30,13 @@
 
                 <!--logo mundo animal-->
                 <div id="logo" class="position-absolute top-50 start-0 translate-middle-y px-5">
-                    <img src="../../assets/logo.webp" alt="Logo Mundo Animal" class="img-fluid" style="max-height: 80px;">
+                    <a href="/" class="text-decoration-none text-light" aria-label="Logo Mundo Animal">
+                        <img src="../../assets/logo.webp" alt="Logo Mundo Animal" class="img-fluid" style="max-height: 80px;">
+                    </a>
                 </div>
 
 
-                <div id="campoPesquisa" class="position-absolute top-50 translate-middle" style="left: 75%">
+                <div id="campoPesquisa" class="position-absolute top-50 translate-middle" style="left: 80%">
                     <form class="d-flex" role="search" aria-label="Campo de pesquisa">
                         <input class="form-control me-2 rounded-pill" type="search" placeholder="Buscar no sistema..." aria-label="Pesquisar" style="width: 400px;">
                         <!-- <button class="btn btn-outline-light" type="submit">Pesquisar</button> -->
@@ -46,7 +48,7 @@
     <!--fim card header-->
 
     <!-- menu de navegacao -->
-    <nav class="navbar navbar-light bg-light border-end border-bottom border-dark" aria-label="Navegacao principal">
+    <nav class="navbar navbar-light bg-custom border-end border-bottom border-dark" aria-label="Navegacao principal">
         <div class="container-fluid flex-column">
             <button class="navbar-toggler mx-auto border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Expandir ou ocultar menu">
                 <span class="navbar-toggler-icon"></span>
@@ -101,6 +103,8 @@
     </nav>
 
     <p class="text-left text-muted p-2"> <span class="small">* Dados mockados (artificiais) para fins de demonstração.</span></p>
+
+    <h3 class="display-6 px-3 py-2 text-decoration-underline"><strong>Dashboard</strong></h3>
 
     <!-- corpo com graficos e métricas -->
     <main class="container-fluid py-1">
@@ -170,11 +174,12 @@
         </div>
     </main>
 
+    <!-- rodapé -->
     <footer class="site-footer bg-danger text-light mt-auto">
         <div class="container-fluid py-4 px-4">
             <div class="row g-4">
                 <hr class="border-light opacity-50 my-4">
-                <div class="d-flex flex-column flex-md-row justify-content-between gap-2 small">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small">
                     <div class="jusfity-content text-center">
                         <p class="mb-0">Mundo Animal</p>
                     </div>
