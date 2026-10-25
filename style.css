@@ -16,3 +16,18 @@
     border-color: #7e291e !important;     
     color: #ffffff !important; 
    }
+
+   .site-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.35);
+   }
+
+   .footer-link {
+    color: #ffffff;
+    text-decoration: none;
+   }
+
+   .footer-link:hover,
+   .footer-link:focus {
+    color: #ffe8e5;
+    text-decoration: underline;
+   }
