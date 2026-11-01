@@ -1,5 +1,5 @@
 (function () {
-    const entityData = {
+    const dadosEntidades = {
         cliente: {
             label: "Cliente",
             fields: [
@@ -48,7 +48,7 @@
         }
     };
 
-    const operationLabels = {
+    const rotulosOperacoes = {
         cadastro: "Cadastrar",
         consulta: "Consultar",
         alteração: "Alterar",
@@ -56,96 +56,96 @@
         remoção: "Remover"
     };
 
-    function openOperation(entityKey, operationKey) {
-        const entity = entityData[entityKey];
-        const operationLabel = operationLabels[operationKey];
-        if (!entity || !operationLabel) return;
+    function abrirOperacao(chaveEntidade, chaveOperacao) {
+        const entidade = dadosEntidades[chaveEntidade];
+        const rotuloOperacao = rotulosOperacoes[chaveOperacao];
+        if (!entidade || !rotuloOperacao) return;
 
-        const isRemoval = operationKey === "remoção" || operationKey === "remocao";
-        const app = document.getElementById("operacaoApp") || document.body.appendChild(document.createElement("div"));
-        app.id = "operacaoApp";
-        app.innerHTML = `
-            <div class="modal fade" id="operationModal" tabindex="-1" aria-labelledby="operationModalLabel" aria-hidden="true">
+        const ehRemocao = chaveOperacao === "remoção" || chaveOperacao === "remocao";
+        const aplicativo = document.getElementById("aplicativoOperacao") || document.body.appendChild(document.createElement("div"));
+        aplicativo.id = "aplicativoOperacao";
+        aplicativo.innerHTML = `
+            <div class="modal fade" id="modalOperacao" tabindex="-1" aria-labelledby="rotuloModalOperacao" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-lg">
                     <div class="modal-content modal-operacoes">
                         <div class="modal-header">
                             <div>
-                                <span class="operacao-kicker">${operationLabel}</span>
-                                <h2 class="modal-title" id="operationModalLabel">${operationLabel} ${entity.label}</h2>
+                                <span class="operacao-kicker">${rotuloOperacao}</span>
+                                <h2 class="modal-title" id="rotuloModalOperacao">${rotuloOperacao} ${entidade.label}</h2>
                             </div>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
                         </div>
-                        <form id="operationForm">
+                        <form id="formularioOperacao">
                             <div class="modal-body">
-                                ${isRemoval ? '<div class="alert alert-warning"><i class="bi bi-exclamation-triangle me-2"></i>Esta ação não poderá ser desfeita.</div>' : ""}
+                                ${ehRemocao ? '<div class="alert alert-warning"><i class="bi bi-exclamation-triangle me-2"></i>Esta ação não poderá ser desfeita.</div>' : ""}
                                 <div class="row g-3">
-                                    ${entity.fields.map(([id, label, type, required]) => type === "textarea"
+                                    ${entidade.fields.map(([id, label, type, obrigatorio]) => type === "textarea"
                                         ? `<div class="col-12"><label class="form-label" for="${id}">${label}</label><textarea class="form-control" id="${id}" name="${id}" rows="3"></textarea></div>`
-                                        : `<div class="col-12 col-md-6"><label class="form-label" for="${id}">${label}${required ? " *" : ""}</label><input class="form-control" id="${id}" name="${id}" type="${type}" ${required ? "required" : ""}></div>`
+                                        : `<div class="col-12 col-md-6"><label class="form-label" for="${id}">${label}${obrigatorio ? " *" : ""}</label><input class="form-control" id="${id}" name="${id}" type="${type}" ${obrigatorio ? "required" : ""}></div>`
                                     ).join("")}
                                 </div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-light rounded-pill px-4" data-bs-dismiss="modal">Cancelar</button>
-                                <button type="submit" class="btn btn-danger rounded-pill px-4">${operationLabel}</button>
+                                <button type="submit" class="btn btn-danger rounded-pill px-4">${rotuloOperacao}</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>`;
 
-        const modalElement = document.getElementById("operationModal");
-        const modal = new bootstrap.Modal(modalElement);
-        app.querySelector("#operationForm").addEventListener("submit", (event) => {
-            event.preventDefault();
+        const elementoModal = document.getElementById("modalOperacao");
+        const modal = new bootstrap.Modal(elementoModal);
+        aplicativo.querySelector("#formularioOperacao").addEventListener("submit", (evento) => {
+            evento.preventDefault();
             modal.hide();
         });
         modal.show();
     }
 
-    function initializeRowSelection() {
-        document.querySelectorAll(".entity-operacoes[data-entity]").forEach((section) => {
-            const alterButton = section.querySelector('[data-operation="alteração"]');
-            const removeButton = section.querySelector('[data-operation="remoção"]');
-            const rows = section.querySelectorAll("tbody tr");
+    function inicializarSelecaoLinhas() {
+        document.querySelectorAll(".operacoesEntidade[data-entity]").forEach((secao) => {
+            const botaoAlterar = secao.querySelector('[data-operation="alteração"]');
+            const botaoRemover = secao.querySelector('[data-operation="remoção"]');
+            const linhas = secao.querySelectorAll("tbody tr");
 
-            alterButton.disabled = true;
-            removeButton.disabled = true;
+            botaoAlterar.disabled = true;
+            botaoRemover.disabled = true;
 
-            rows.forEach((row) => {
-                row.tabIndex = 0;
-                row.setAttribute("role", "button");
-                row.setAttribute("aria-label", `Selecionar registro de ${section.dataset.entity}`);
+            linhas.forEach((linha) => {
+                linha.tabIndex = 0;
+                linha.setAttribute("role", "button");
+                linha.setAttribute("aria-label", `Selecionar registro de ${secao.dataset.entity}`);
 
-                const selectRow = () => {
-                    rows.forEach((item) => item.classList.remove("selected-row"));
-                    row.classList.add("selected-row");
-                    alterButton.disabled = false;
-                    removeButton.disabled = false;
+                const selecionarLinha = () => {
+                    linhas.forEach((item) => item.classList.remove("linhaSelecionada"));
+                    linha.classList.add("linhaSelecionada");
+                    botaoAlterar.disabled = false;
+                    botaoRemover.disabled = false;
                 };
 
-                row.addEventListener("click", selectRow);
-                row.addEventListener("keydown", (event) => {
-                    if (event.key === "Enter" || event.key === " ") {
-                        event.preventDefault();
-                        selectRow();
+                linha.addEventListener("click", selecionarLinha);
+                linha.addEventListener("keydown", (evento) => {
+                    if (evento.key === "Enter" || evento.key === " ") {
+                        evento.preventDefault();
+                        selecionarLinha();
                     }
                 });
             });
         });
     }
 
-    document.addEventListener("click", (event) => {
-        const trigger = event.target.closest("[data-operation]");
-        if (!trigger) return;
+    document.addEventListener("click", (evento) => {
+        const acionador = evento.target.closest("[data-operation]");
+        if (!acionador) return;
 
-        if (trigger.dataset.operation === "alteração" || trigger.dataset.operation === "remoção") {
+        if (acionador.dataset.operation === "alteração" || acionador.dataset.operation === "remoção") {
             alert("Funcionalidade em construção");
             return;
         }
 
-        openOperation(trigger.dataset.entity, trigger.dataset.operation);
+        abrirOperacao(acionador.dataset.entity, acionador.dataset.operation);
     });
 
-    initializeRowSelection();
+    inicializarSelecaoLinhas();
 })();
