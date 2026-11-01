@@ -36,11 +36,11 @@
     text-decoration: underline;
    }
 
-   .operation-page {
+   .operacao-pagina {
     background: #fffaf9;
    }
 
-   .operation-heading {
+   .operacao-heading {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -50,7 +50,7 @@
     padding: 0 1.5rem;
    }
 
-   .operation-kicker {
+   .operacao-kicker {
     color: #882d21;
     font-size: .75rem;
     font-weight: 700;
@@ -58,17 +58,17 @@
     text-transform: uppercase;
    }
 
-   .operation-heading h1 {
+   .operacao-heading h1 {
     color: #3d211d;
     margin: .35rem 0;
    }
 
-   .operation-heading p {
+   .operacao-heading p {
     color: #6c757d;
     margin: 0;
    }
 
-   .operation-card {
+   .operacao-card {
     max-width: 1100px;
     margin: 0 auto 3rem;
     padding: 1.25rem 1.5rem;
@@ -79,45 +79,110 @@
     box-shadow: 0 .25rem 1rem rgba(136, 45, 33, .06);
    }
 
-   .operation-card i {
+   .operacao-card i {
     color: #dc3545;
     margin-right: .5rem;
    }
 
-   .operation-success {
+   .operacao-sucesso {
     border-color: #b7dfc2;
     color: #246b36;
    }
 
-   .operation-success i {
+   .operacao-sucesso i {
     color: #198754;
    }
 
-   .operation-modal {
+   .modal-operacoes {
     border: 0;
     border-radius: 1rem;
     overflow: hidden;
    }
 
-   .operation-modal .modal-header {
+   .modal-operacoes .modal-header {
     border-bottom: 1px solid #f0d4cf;
     background: #fff8f6;
    }
 
-   .operation-modal .modal-title {
+   .modal-operacoes .modal-title {
     color: #3d211d;
     margin-top: .25rem;
    }
 
-   .operation-modal .form-control:focus {
+   .modal-operacoes .form-control:focus {
     border-color: #dc3545;
     box-shadow: 0 0 0 .2rem rgba(220, 53, 69, .15);
    }
 
+   .entity-secoes {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+   }
+
+   .entity-operacoes {
+    padding: 1.5rem;
+    border: 1px solid #050505;
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0 .25rem 1rem rgba(136, 45, 33, .06);
+   }
+
+   .entity-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+   }
+
+   .entity-header h2 {
+    color: #3d211d;
+    margin: .25rem 0 0;
+   }
+
+   .entity-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: .5rem;
+   }
+
+   .entity-table {
+    margin-bottom: 0;
+    min-width: 650px;
+   }
+
+   .entity-table thead th {
+    color: #882d21;
+    background: #fff8f6;
+    white-space: nowrap;
+   }
+
+   .entity-table tbody tr:last-child td {
+    border-bottom: 0;
+   }
+
+   main > .row > [class*="col-"] section {
+    aspect-ratio: auto !important;
+    min-height: 270px;
+   }
+
    @media (max-width: 576px) {
-    .operation-heading {
+    .operacao-heading {
      align-items: flex-start;
      flex-direction: column;
      margin-top: 2rem;
     }
-   }
+
+    .entity-header {
+     align-items: flex-start;
+     flex-direction: column;
+    }
+
+    .entity-acoes {
+     justify-content: flex-start;
+    }
+    }

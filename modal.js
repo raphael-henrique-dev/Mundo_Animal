@@ -67,10 +67,10 @@
         app.innerHTML = `
             <div class="modal fade" id="operationModal" tabindex="-1" aria-labelledby="operationModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-lg">
-                    <div class="modal-content operation-modal">
+                    <div class="modal-content modal-operacoes">
                         <div class="modal-header">
                             <div>
-                                <span class="operation-kicker">${operationLabel}</span>
+                                <span class="operacao-kicker">${operationLabel}</span>
                                 <h2 class="modal-title" id="operationModalLabel">${operationLabel} ${entity.label}</h2>
                             </div>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
