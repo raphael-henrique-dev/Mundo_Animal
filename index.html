@@ -49,7 +49,7 @@
     <!--fim card header-->
 
     <!-- menu de navegacao -->
-    <nav class="navbar navbar-light bg-custom border-end border-bottom border-dark" aria-label="Navegacao principal">
+    <nav class="navbar navbar-light bg-custom border-end border-bottom border-0" aria-label="Navegacao principal">
         <div class="container-fluid flex-column">
             <button class="navbar-toggler mx-auto border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Expandir ou ocultar menu">
                 <span class="navbar-toggler-icon"></span>
@@ -141,12 +141,12 @@
     <h3 class="display-6 px-1 pt-4 text-decoration-underline"><strong>Dados Cadastrados</strong></h3>
 
         <div class="entity-secoes">
-            <section class="entity-operacoes">
+            <section class="entity-operacoes" data-entity="cliente">
                 <div class="entity-header">
-                    <div><h2>Clientes</h2></div>
+                    <div><h2>Clientes</h2><p class="selection-hint mb-0">Selecione uma linha para alterar ou remover.</p></div>
                     <div class="entity-acoes">
                         <button class="btn btn-danger rounded-pill" data-entity="cliente" data-operation="cadastro"><i class="bi bi-plus-lg"></i> Cadastrar Cliente</button>
-                        <button class="btn btn-outline-danger rounded-pill" data-entity="cliente" data-operation="consulta">Consultar</button>
+                        <!-- <button class="btn btn-outline-danger rounded-pill" data-entity="cliente" data-operation="consulta">Consultar</button> -->
                         <button class="btn btn-outline-danger rounded-pill" data-entity="cliente" data-operation="alteração">Alterar</button>
                         <button class="btn btn-outline-danger rounded-pill" data-entity="cliente" data-operation="remoção">Remover</button>
                     </div>
@@ -158,12 +158,12 @@
                 </tbody></table></div>
             </section>
 
-            <section class="entity-operacoes">
+            <section class="entity-operacoes" data-entity="funcionario">
                 <div class="entity-header">
-                    <div><h2>Funcionários</h2></div>
+                    <div><h2>Funcionários</h2><p class="selection-hint mb-0">Selecione uma linha para alterar ou remover.</p></div>
                     <div class="entity-acoes">
                         <button class="btn btn-danger rounded-pill" data-entity="funcionario" data-operation="cadastro"><i class="bi bi-plus-lg"></i> Cadastrar Funcionário</button>
-                        <button class="btn btn-outline-danger rounded-pill" data-entity="funcionario" data-operation="consulta">Consultar</button>
+                        <!-- <button class="btn btn-outline-danger rounded-pill" data-entity="funcionario" data-operation="consulta">Consultar</button> -->
                         <button class="btn btn-outline-danger rounded-pill" data-entity="funcionario" data-operation="alteração">Alterar</button>
                         <button class="btn btn-outline-danger rounded-pill" data-entity="funcionario" data-operation="remoção">Remover</button>
                     </div>
@@ -175,12 +175,12 @@
                 </tbody></table></div>
             </section>
 
-            <section class="entity-operacoes">
+            <section class="entity-operacoes" data-entity="animal">
                 <div class="entity-header">
-                    <div><h2>Animais</h2></div>
+                    <div><h2>Animais</h2><p class="selection-hint mb-0">Selecione uma linha para alterar ou remover.</p></div>
                     <div class="entity-acoes">
                         <button class="btn btn-danger rounded-pill" data-entity="animal" data-operation="cadastro"><i class="bi bi-plus-lg"></i> Cadastrar Animal</button>
-                        <button class="btn btn-outline-danger rounded-pill" data-entity="animal" data-operation="consulta">Consultar</button>
+                        <!-- <button class="btn btn-outline-danger rounded-pill" data-entity="animal" data-operation="consulta">Consultar</button> -->
                         <button class="btn btn-outline-danger rounded-pill" data-entity="animal" data-operation="alteração">Alterar</button>
                         <button class="btn btn-outline-danger rounded-pill" data-entity="animal" data-operation="remoção">Remover</button>
                     </div>
@@ -192,12 +192,12 @@
                 </tbody></table></div>
             </section>
 
-            <section class="entity-operacoes">
+            <section class="entity-operacoes" data-entity="atendimento">
                 <div class="entity-header">
-                    <div><h2>Atendimentos</h2></div>
+                    <div><h2>Atendimentos</h2><p class="selection-hint mb-0">Selecione uma linha para alterar ou remover.</p></div>
                     <div class="entity-acoes">
                         <button class="btn btn-danger rounded-pill" data-entity="atendimento" data-operation="cadastro"><i class="bi bi-plus-lg"></i> Cadastrar Atendimento</button>
-                        <button class="btn btn-outline-danger rounded-pill" data-entity="atendimento" data-operation="consulta">Consultar</button>
+                        <!-- <button class="btn btn-outline-danger rounded-pill" data-entity="atendimento" data-operation="consulta">Consultar</button> -->
                         <button class="btn btn-outline-danger rounded-pill" data-entity="atendimento" data-operation="alteração">Alterar</button>
                         <button class="btn btn-outline-danger rounded-pill" data-entity="atendimento" data-operation="remoção">Remover</button>
                     </div>

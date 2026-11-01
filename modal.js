@@ -103,8 +103,49 @@
         modal.show();
     }
 
+    function initializeRowSelection() {
+        document.querySelectorAll(".entity-operacoes[data-entity]").forEach((section) => {
+            const alterButton = section.querySelector('[data-operation="alteração"]');
+            const removeButton = section.querySelector('[data-operation="remoção"]');
+            const rows = section.querySelectorAll("tbody tr");
+
+            alterButton.disabled = true;
+            removeButton.disabled = true;
+
+            rows.forEach((row) => {
+                row.tabIndex = 0;
+                row.setAttribute("role", "button");
+                row.setAttribute("aria-label", `Selecionar registro de ${section.dataset.entity}`);
+
+                const selectRow = () => {
+                    rows.forEach((item) => item.classList.remove("selected-row"));
+                    row.classList.add("selected-row");
+                    alterButton.disabled = false;
+                    removeButton.disabled = false;
+                };
+
+                row.addEventListener("click", selectRow);
+                row.addEventListener("keydown", (event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                        event.preventDefault();
+                        selectRow();
+                    }
+                });
+            });
+        });
+    }
+
     document.addEventListener("click", (event) => {
         const trigger = event.target.closest("[data-operation]");
-        if (trigger) openOperation(trigger.dataset.entity, trigger.dataset.operation);
+        if (!trigger) return;
+
+        if (trigger.dataset.operation === "alteração" || trigger.dataset.operation === "remoção") {
+            alert("Funcionalidade em construção");
+            return;
+        }
+
+        openOperation(trigger.dataset.entity, trigger.dataset.operation);
     });
+
+    initializeRowSelection();
 })();

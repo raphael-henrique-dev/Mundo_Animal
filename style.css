@@ -165,6 +165,32 @@
     border-bottom: 0;
    }
 
+   .entity-table tbody tr {
+    cursor: pointer;
+    transition: background-color .2s ease, box-shadow .2s ease;
+   }
+
+   .entity-table tbody tr:hover,
+   .entity-table tbody tr:focus {
+    background-color: #fff8f6;
+    outline: none;
+   }
+
+   .entity-table tbody tr.selected-row {
+    background-color: #ffe8e5;
+    box-shadow: inset 4px 0 #dc3545;
+   }
+
+   .selection-hint {
+    color: #6c757d;
+    font-size: .85rem;
+   }
+
+   .entity-actions .btn:disabled {
+    cursor: not-allowed;
+    opacity: .55;
+   }
+
    main > .row > [class*="col-"] section {
     aspect-ratio: auto !important;
     min-height: 270px;
