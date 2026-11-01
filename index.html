@@ -11,6 +11,7 @@
 </head>
 <body class="d-flex flex-column min-vh-100">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script defer src="modal.js"></script>
 
     <!-- card header / titulo -->
     <div class="container-fluid p-0">
@@ -56,42 +57,42 @@
             <div class="collapse w-100" id="menuPrincipal">
                 <ul class="navbar-nav flex-column align-items-stretch gap-2">
                     <li class="nav-item">
-                        <button class="nav-link btn-custom-1 text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='../../index.html'">Início</button>
+                        <button class="nav-link btn-custom-1 text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='index.html'">Início</button>
                     </li>
                     <li class="nav-item dropdown">
                         <button id="menuCliente" class="nav-link dropdown-toggle btn-custom-1 text-dark px-3 bg-transparent border-0 rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">Cliente</button>
                         <ul class="dropdown-menu bg-transparent border-0" aria-labelledby="menuCliente">
-                            <li><a class="dropdown-item" href="../../views/cliente/cadastro.html">● Cadastro de Cliente</a></li>
-                            <li><a class="dropdown-item" href="../../views/cliente/consulta.html">● Consulta de Cliente</a></li>
-                            <li><a class="dropdown-item" href="../../views/cliente/alteração.html">● Alteração de Cliente</a></li>
-                            <li><a class="dropdown-item" href="../../views/cliente/remoção.html">● Remoção de Cliente</a></li>
+                            <li><button class="dropdown-item" type="button" data-entity="cliente" data-operation="cadastro">● Cadastro de Cliente</button></li>
+                            <li><button class="dropdown-item" type="button" data-entity="cliente" data-operation="consulta">● Consulta de Cliente</button></li>
+                            <li><button class="dropdown-item" type="button" data-entity="cliente" data-operation="alteração">● Alteração de Cliente</button></li>
+                            <li><button class="dropdown-item" type="button" data-entity="cliente" data-operation="remoção">● Remoção de Cliente</button></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <button id="menuFuncionario" class="nav-link dropdown-toggle btn-custom-1 text-dark px-3 bg-transparent border-0 rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">Funcionário</button>
                         <ul class="dropdown-menu bg-transparent border-0" aria-labelledby="menuFuncionario">
-                            <li><a class="dropdown-item" href="../../views/funcionario/cadastro.html">● Cadastro de Funcionário</a></li>
-                            <li><a class="dropdown-item" href="../../views/funcionario/consulta.html">● Consulta de Funcionário</a></li>
-                            <li><a class="dropdown-item" href="../../views/funcionario/alteração.html">● Alteração de Funcionário</a></li>
-                            <li><a class="dropdown-item" href="../../views/funcionario/remoção.html">● Remoção de Funcionário</a></li>
+                            <li><button class="dropdown-item" type="button" data-entity="funcionario" data-operation="cadastro">● Cadastro de Funcionário</button></li>
+                            <li><button class="dropdown-item" type="button" data-entity="funcionario" data-operation="consulta">● Consulta de Funcionário</button></li>
+                            <li><button class="dropdown-item" type="button" data-entity="funcionario" data-operation="alteração">● Alteração de Funcionário</button></li>
+                            <li><button class="dropdown-item" type="button" data-entity="funcionario" data-operation="remoção">● Remoção de Funcionário</button></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <button id="menuAtendimento" class="nav-link dropdown-toggle btn-custom-1 text-dark px-3 bg-transparent border-0 rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">Atendimento</button>
                         <ul class="dropdown-menu bg-transparent border-0" aria-labelledby="menuAtendimento">
-                            <li><a class="dropdown-item" href="../../views/atendimento/cadastro.html">● Cadastro de Atendimento</a></li>
-                            <li><a class="dropdown-item" href="../../views/atendimento/consulta.html">● Consulta de Atendimento</a></li>
-                            <li><a class="dropdown-item" href="../../views/atendimento/alteração.html">● Alteração de Atendimento</a></li>
-                            <li><a class="dropdown-item" href="../../views/atendimento/remoção.html">● Remoção de Atendimento</a></li>
+                            <li><button class="dropdown-item" type="button" data-entity="atendimento" data-operation="cadastro">● Cadastro de Atendimento</button></li>
+                            <li><button class="dropdown-item" type="button" data-entity="atendimento" data-operation="consulta">● Consulta de Atendimento</button></li>
+                            <li><button class="dropdown-item" type="button" data-entity="atendimento" data-operation="alteração">● Alteração de Atendimento</button></li>
+                            <li><button class="dropdown-item" type="button" data-entity="atendimento" data-operation="remoção">● Remoção de Atendimento</button></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <button id="menuAnimal" class="nav-link dropdown-toggle btn-custom-1 text-dark px-3 bg-transparent border-0 rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">Animal</button>
                         <ul class="dropdown-menu bg-transparent border-0" aria-labelledby="menuAnimal">
-                            <li><a class="dropdown-item" href="../../views/animal/cadastro.html">● Cadastro de Animal</a></li>
-                            <li><a class="dropdown-item" href="../../views/animal/consulta.html">● Consulta de Animal</a></li>
-                            <li><a class="dropdown-item" href="../../views/animal/alteração.html">● Alteração de Animal</a></li>
-                            <li><a class="dropdown-item" href="../../views/animal/remoção.html">● Remoção de Animal</a></li>
+                            <li><button class="dropdown-item" type="button" data-entity="animal" data-operation="cadastro">● Cadastro de Animal</button></li>
+                            <li><button class="dropdown-item" type="button" data-entity="animal" data-operation="consulta">● Consulta de Animal</button></li>
+                            <li><button class="dropdown-item" type="button" data-entity="animal" data-operation="alteração">● Alteração de Animal</button></li>
+                            <li><button class="dropdown-item" type="button" data-entity="animal" data-operation="remoção">● Remoção de Animal</button></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -108,6 +109,7 @@
 
     <!-- corpo com graficos e métricas -->
     <main class="container-fluid py-1">
+        <div id="operacaoApp"></div>
         <div class="row g-3">
             <div class="col-12 col-md-3">
                 <section class="border border-dark rounded p-3 h-100" style="aspect-ratio: 1 / 1;">

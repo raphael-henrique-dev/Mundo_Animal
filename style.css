@@ -12,13 +12,13 @@
     }
 
    .btn-custom-1:hover {
-    background-color: #882d21 !important; 
+    background-color: #dc3545 !important;
     border-color: #7e291e !important;     
     color: #ffffff !important; 
    }
 
    .bg-custom {
-    background-color: #dc3545 !important; 
+    background-color: #ffffff !important;
    }
 
    .site-footer {
@@ -34,4 +34,90 @@
    .footer-link:focus {
     color: #ffe8e5;
     text-decoration: underline;
+   }
+
+   .operation-page {
+    background: #fffaf9;
+   }
+
+   .operation-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 3rem auto 1.5rem;
+    padding: 0 1.5rem;
+   }
+
+   .operation-kicker {
+    color: #882d21;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+   }
+
+   .operation-heading h1 {
+    color: #3d211d;
+    margin: .35rem 0;
+   }
+
+   .operation-heading p {
+    color: #6c757d;
+    margin: 0;
+   }
+
+   .operation-card {
+    max-width: 1100px;
+    margin: 0 auto 3rem;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid #f0d4cf;
+    border-radius: 1rem;
+    background: #fff;
+    color: #6c757d;
+    box-shadow: 0 .25rem 1rem rgba(136, 45, 33, .06);
+   }
+
+   .operation-card i {
+    color: #dc3545;
+    margin-right: .5rem;
+   }
+
+   .operation-success {
+    border-color: #b7dfc2;
+    color: #246b36;
+   }
+
+   .operation-success i {
+    color: #198754;
+   }
+
+   .operation-modal {
+    border: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+   }
+
+   .operation-modal .modal-header {
+    border-bottom: 1px solid #f0d4cf;
+    background: #fff8f6;
+   }
+
+   .operation-modal .modal-title {
+    color: #3d211d;
+    margin-top: .25rem;
+   }
+
+   .operation-modal .form-control:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 .2rem rgba(220, 53, 69, .15);
+   }
+
+   @media (max-width: 576px) {
+    .operation-heading {
+     align-items: flex-start;
+     flex-direction: column;
+     margin-top: 2rem;
+    }
    }
