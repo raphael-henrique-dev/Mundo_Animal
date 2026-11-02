@@ -56,6 +56,20 @@
         remoção: "Remover"
     };
 
+    function converterData(d) { return d.split("/").reverse().join("-"); } // conversão de 12/04/1988 para 1988-04-12
+
+    const mapeamentoLinha = {
+        cliente: (l) => ({ nome: l[0], cpf: l[1], nascimento: converterData(l[2]), telefone: l[3] }),
+        funcionario: (l) => ({ nome: l[0], cargo: l[1], cpf: l[2], telefone: l[3], email: l[4] }),
+        animal: (l) => ({ nome: l[0], especie: l[1], raca: l[2], sexo: l[3], cliente: l[4] }),
+        atendimento: (l) => {
+            const [data, hora] = l[0].split(" às ");
+            return { data: converterData(data), hora, cliente: l[1], animal: l[2], funcionario: l[3], descricao: l[4] };
+        }
+    };
+
+    let linhaSelecionada = []
+
     function abrirOperacao(chaveEntidade, chaveOperacao) {
         const entidade = dadosEntidades[chaveEntidade];
         const rotuloOperacao = rotulosOperacoes[chaveOperacao];
@@ -94,6 +108,18 @@
                 </div>
             </div>`;
 
+        const usaLinha = chaveOperacao === "alteração" || ehRemocao;
+
+        if (usaLinha && linhaSelecionada) {
+            const valores = mapeamentoLinha[chaveEntidade](linhaSelecionada);
+
+            entidade.fields.forEach(([id]) => {
+                const campo = aplicativo.querySelector(`#${id}`);
+                campo.value = valores[id] ?? "";
+                if (ehRemocao) campo.disabled = true;
+            });
+        }
+
         const elementoModal = document.getElementById("modalOperacao");
         const modal = new bootstrap.Modal(elementoModal);
         aplicativo.querySelector("#formularioOperacao").addEventListener("submit", (evento) => {
@@ -111,6 +137,7 @@
 
             botaoAlterar.disabled = true;
             botaoRemover.disabled = true;
+            linhaSelecionada = []
 
             linhas.forEach((linha) => {
                 linha.tabIndex = 0;
@@ -122,6 +149,10 @@
                     linha.classList.add("linhaSelecionada");
                     botaoAlterar.disabled = false;
                     botaoRemover.disabled = false;
+
+                    linhaSelecionada = []
+                    linha.querySelectorAll("td").forEach((el) => {linhaSelecionada.push(el.innerText)})
+                    
                 };
 
                 linha.addEventListener("click", selecionarLinha);
@@ -139,13 +170,9 @@
         const acionador = evento.target.closest("[data-operation]");
         if (!acionador) return;
 
-        if (acionador.dataset.operation === "alteração" || acionador.dataset.operation === "remoção") {
-            alert("Funcionalidade em construção");
-            return;
-        }
-
         abrirOperacao(acionador.dataset.entity, acionador.dataset.operation);
     });
+
 
     inicializarSelecaoLinhas();
 })();

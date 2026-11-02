@@ -37,12 +37,13 @@
                 </div>
 
 
-                <div id="campoBusca" class="position-absolute top-50 translate-middle" style="left: 80%">
+                <!-- <div id="campoBusca" class="position-absolute top-50 translate-middle" style="left: 80%">
                     <form class="d-flex" role="search" aria-label="Campo de pesquisa">
-                        <input class="form-control me-2 rounded-pill" type="search" placeholder="Buscar no sistema..." aria-label="Pesquisar" style="width: 400px;">
+                        <input class="form-control me-2 rounded-pill" type="search" placeholder="Buscar no sistema..." aria-label="Pesquisar" style="width: 400px;"> -->
                         <!-- <button class="btn btn-outline-light" type="submit">Pesquisar</button> -->
-                    </form>
-                </div>
+                    <!-- </form> -->
+                <!-- </div> -->
+                
             </div>
         </div>
     </div>
@@ -58,6 +59,18 @@
                 <ul class="navbar-nav flex-column align-items-stretch gap-2">
                     <li class="nav-item">
                         <button class="nav-link botaoPersonalizado text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='index.html'">Início</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link botaoPersonalizado text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='views/clientes.html'">Clientes</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link botaoPersonalizado text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='views/funcionarios.html'">Funcionários</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link botaoPersonalizado text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='views/animais.html'">Animais</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link botaoPersonalizado text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='views/atendimentos.html'">Atendimentos</button>
                     </li>
                     <li class="nav-item">
                         <button class="nav-link botaoPersonalizado text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='views/institucional/inicio.html'">Página Institucional</button>
@@ -137,78 +150,6 @@
                 </section>
             </div>
         </div>
-
-    <h3 class="display-6 px-1 pt-4 text-decoration-underline"><strong>Dados Cadastrados</strong></h3>
-
-        <div class="secoesEntidade">
-            <section class="operacoesEntidade" data-entity="cliente">
-                <div class="cabecalhoEntidade">
-                    <div><h2>Clientes</h2><p class="dicaSelecao mb-0">Selecione uma linha para alterar ou remover.</p></div>
-                    <div class="acoesEntidade">
-                        <button class="btn btn-danger rounded-pill" data-entity="cliente" data-operation="cadastro"><i class="bi bi-plus-lg"></i> Cadastrar Cliente</button>
-                        <!-- <button class="btn btn-outline-danger rounded-pill" data-entity="cliente" data-operation="consulta">Consultar</button> -->
-                        <button class="btn btn-outline-danger rounded-pill" data-entity="cliente" data-operation="alteração">Alterar</button>
-                        <button class="btn btn-outline-danger rounded-pill" data-entity="cliente" data-operation="remoção">Remover</button>
-                    </div>
-                </div>
-                <div class="table-responsive"><table class="table tabelaEntidade align-middle"><thead><tr><th>Nome</th><th>CPF</th><th>Data de nascimento</th><th>Telefone</th></tr></thead><tbody>
-                    <tr><td>Mariana Souza</td><td>***.***.***-10</td><td>12/04/1988</td><td>(11) 99999-1000</td></tr>
-                    <tr><td>João Oliveira</td><td>***.***.***-42</td><td>23/09/1979</td><td>(11) 98888-2040</td></tr>
-                    <tr><td>Carla Mendes</td><td>***.***.***-87</td><td>08/01/1995</td><td>(11) 97777-3080</td></tr>
-                </tbody></table></div>
-            </section>
-
-            <section class="operacoesEntidade" data-entity="funcionario">
-                <div class="cabecalhoEntidade">
-                    <div><h2>Funcionários</h2><p class="dicaSelecao mb-0">Selecione uma linha para alterar ou remover.</p></div>
-                    <div class="acoesEntidade">
-                        <button class="btn btn-danger rounded-pill" data-entity="funcionario" data-operation="cadastro"><i class="bi bi-plus-lg"></i> Cadastrar Funcionário</button>
-                        <!-- <button class="btn btn-outline-danger rounded-pill" data-entity="funcionario" data-operation="consulta">Consultar</button> -->
-                        <button class="btn btn-outline-danger rounded-pill" data-entity="funcionario" data-operation="alteração">Alterar</button>
-                        <button class="btn btn-outline-danger rounded-pill" data-entity="funcionario" data-operation="remoção">Remover</button>
-                    </div>
-                </div>
-                <div class="table-responsive"><table class="table tabelaEntidade align-middle"><thead><tr><th>Nome</th><th>Cargo</th><th>CPF</th><th>Telefone</th><th>E-mail</th></tr></thead><tbody>
-                    <tr><td>Beatriz Lima</td><td>Veterinária</td><td>***.***.***-21</td><td>(11) 96666-1100</td><td>beatriz@mundoanimal.com</td></tr>
-                    <tr><td>Rafael Santos</td><td>Atendente</td><td>***.***.***-64</td><td>(11) 95555-2200</td><td>rafael@mundoanimal.com</td></tr>
-                    <tr><td>Luciana Alves</td><td>Gerente</td><td>***.***.***-09</td><td>(11) 94444-3300</td><td>luciana@mundoanimal.com</td></tr>
-                </tbody></table></div>
-            </section>
-
-            <section class="operacoesEntidade" data-entity="animal">
-                <div class="cabecalhoEntidade">
-                    <div><h2>Animais</h2><p class="dicaSelecao mb-0">Selecione uma linha para alterar ou remover.</p></div>
-                    <div class="acoesEntidade">
-                        <button class="btn btn-danger rounded-pill" data-entity="animal" data-operation="cadastro"><i class="bi bi-plus-lg"></i> Cadastrar Animal</button>
-                        <!-- <button class="btn btn-outline-danger rounded-pill" data-entity="animal" data-operation="consulta">Consultar</button> -->
-                        <button class="btn btn-outline-danger rounded-pill" data-entity="animal" data-operation="alteração">Alterar</button>
-                        <button class="btn btn-outline-danger rounded-pill" data-entity="animal" data-operation="remoção">Remover</button>
-                    </div>
-                </div>
-                <div class="table-responsive"><table class="table tabelaEntidade align-middle"><thead><tr><th>Nome</th><th>Espécie</th><th>Raça</th><th>Sexo</th><th>Responsável</th></tr></thead><tbody>
-                    <tr><td>Thor</td><td>Cachorro</td><td>Golden Retriever</td><td>Macho</td><td>Mariana Souza</td></tr>
-                    <tr><td>Luna</td><td>Gato</td><td>Siamês</td><td>Fêmea</td><td>João Oliveira</td></tr>
-                    <tr><td>Nina</td><td>Cachorro</td><td>Shih-tzu</td><td>Fêmea</td><td>Carla Mendes</td></tr>
-                </tbody></table></div>
-            </section>
-
-            <section class="operacoesEntidade" data-entity="atendimento">
-                <div class="cabecalhoEntidade">
-                    <div><h2>Atendimentos</h2><p class="dicaSelecao mb-0">Selecione uma linha para alterar ou remover.</p></div>
-                    <div class="acoesEntidade">
-                        <button class="btn btn-danger rounded-pill" data-entity="atendimento" data-operation="cadastro"><i class="bi bi-plus-lg"></i> Cadastrar Atendimento</button>
-                        <!-- <button class="btn btn-outline-danger rounded-pill" data-entity="atendimento" data-operation="consulta">Consultar</button> -->
-                        <button class="btn btn-outline-danger rounded-pill" data-entity="atendimento" data-operation="alteração">Alterar</button>
-                        <button class="btn btn-outline-danger rounded-pill" data-entity="atendimento" data-operation="remoção">Remover</button>
-                    </div>
-                </div>
-                <div class="table-responsive"><table class="table tabelaEntidade align-middle"><thead><tr><th>Data e hora</th><th>Cliente</th><th>Animal</th><th>Funcionário que atendeu</th><th>Descrição</th><th>Status</th></tr></thead><tbody>
-                    <tr><td>01/11/2026 às 09:00</td><td>Mariana Souza</td><td>Thor</td><td>Beatriz Lima</td><td>Avaliação clínica de rotina</td><td><span class="badge text-bg-success">Concluído</span></td></tr>
-                    <tr><td>02/11/2026 às 14:30</td><td>João Oliveira</td><td>Luna</td><td>Beatriz Lima</td><td>Consulta e vacinação</td><td><span class="badge text-bg-warning">Agendado</span></td></tr>
-                    <tr><td>03/11/2026 às 11:15</td><td>Carla Mendes</td><td>Nina</td><td>Rafael Santos</td><td>Retorno veterinário</td><td><span class="badge text-bg-info">Confirmado</span></td></tr>
-                </tbody></table></div>
-            </section>
-        </div>
     </main>
 
     <!-- rodapé -->
@@ -221,7 +162,7 @@
                         <p class="mb-0">Mundo Animal</p>
                     </div>
                     <span>&copy; 2026 Mundo Animal. Todos os direitos reservados.</span>
-                    <span>Desenvolvido por <a href="https://www.github.com/raphael-henrique-dev" target="_blank" class="text-light text-decoration-underline">Raphael</a> & <a href="https://www.github.com/{github_do_pedro}" target="_blank" class="text-light text-decoration-underline">Pedro</a> </span>
+                    <span>Desenvolvido por <a href="https://www.github.com/raphael-henrique-dev" target="_blank" class="text-light text-decoration-underline">Raphael</a> & <a href="https://www.github.com/finpama" target="_blank" class="text-light text-decoration-underline">Pedro</a> </span>
                  </div>
             </div>
         </div>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>Mundo Animal</title>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script defer src="../modal.js"></script>
+
+    <!-- card header / titulo -->
+    <div class="container-fluid p-0">
+        <div class="card w-full bg-danger border border-dark border-0 rounded-0 text-light text-centermy-0">
+            
+            <div class="card-body d-flex justify-content-between align-items-center position-relative">
+
+                <!-- titulo e subtitulo -->
+                <div class="text-center w-100">
+                    <a href="/" class="text-decoration-none text-light">
+                    <h1 class="card-title">Mundo Animal</h1>
+                    <p class="card-text mb-0">O melhor lugar para cuidar do seu pet!</p>
+                    </a>
+                </div>
+                <!------------------------->
+
+
+                <!--logo mundo animal-->
+                <div id="logo" class="position-absolute top-50 start-0 translate-middle-y px-5">
+                    <a href="/" class="text-decoration-none text-light" aria-label="Logo Mundo Animal">
+                        <img src="../assets/logo.webp" alt="Logo Mundo Animal" class="img-fluid" style="max-height: 80px;">
+                    </a>
+                </div>
+
+
+                <!-- <div id="campoBusca" class="position-absolute top-50 translate-middle" style="left: 80%">
+                    <form class="d-flex" role="search" aria-label="Campo de pesquisa">
+                        <input class="form-control me-2 rounded-pill" type="search" placeholder="Buscar no sistema..." aria-label="Pesquisar" style="width: 400px;"> -->
+                        <!-- <button class="btn btn-outline-light" type="submit">Pesquisar</button> -->
+                    <!-- </form> -->
+                <!-- </div> -->
+                
+            </div>
+        </div>
+    </div>
+    <!--fim card header-->
+
+    <!-- menu de navegacao -->
+    <nav class="navbar navbar-light fundoPersonalizado border-end border-bottom border-0" aria-label="Navegacao principal">
+        <div class="container-fluid flex-column">
+            <button class="navbar-toggler mx-auto border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacao" aria-controls="menuNavegacao" aria-expanded="false" aria-label="Expandir ou ocultar menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse w-100" id="menuNavegacao">
+                <ul class="navbar-nav flex-column align-items-stretch gap-2">
+                    <li class="nav-item">
+                        <button class="nav-link botaoPersonalizado text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='../index.html'">Início</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link botaoPersonalizado text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='clientes.html'">Clientes</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link botaoPersonalizado text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='funcionarios.html'">Funcionários</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link botaoPersonalizado text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='animais.html'">Animais</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link botaoPersonalizado text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='atendimentos.html'">Atendimentos</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link botaoPersonalizado text-dark px-3 bg-transparent border-0 rounded-pill" onclick="window.location.href='institucional/inicio.html'">Página Institucional</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container-fluid py-1">
+        <div class="secoesEntidade">
+            <section class="operacoesEntidade" data-entity="cliente">
+                <div class="cabecalhoEntidade">
+                    <div><h2>Clientes</h2><p class="dicaSelecao mb-0">Selecione uma linha para alterar ou remover.</p></div>
+                    <div class="acoesEntidade">
+                        <button class="btn btn-danger rounded-pill" data-entity="cliente" data-operation="cadastro"><i class="bi bi-plus-lg"></i> Cadastrar Cliente</button>
+                        <!-- <button class="btn btn-outline-danger rounded-pill" data-entity="cliente" data-operation="consulta">Consultar</button> -->
+                        <button class="btn btn-outline-danger rounded-pill" data-entity="cliente" data-operation="alteração">Alterar</button>
+                        <button class="btn btn-outline-danger rounded-pill" data-entity="cliente" data-operation="remoção">Remover</button>
+                    </div>
+                </div>
+                <div class="table-responsive"><table class="table tabelaEntidade align-middle"><thead><tr><th>Nome</th><th>CPF</th><th>Data de nascimento</th><th>Telefone</th></tr></thead><tbody>
+                    <tr><td>Mariana Souza</td><td>***.***.***-10</td><td>12/04/1988</td><td>(11) 99999-1000</td></tr>
+                    <tr><td>João Oliveira</td><td>***.***.***-42</td><td>23/09/1979</td><td>(11) 98888-2040</td></tr>
+                    <tr><td>Carla Mendes</td><td>***.***.***-87</td><td>08/01/1995</td><td>(11) 97777-3080</td></tr>
+                </tbody></table></div>
+            </section>
+        </div>
+    </main>
+
+    <!-- rodapé -->
+    <footer class="rodapeSite bg-danger text-light mt-auto">
+        <div class="container-fluid py-4 px-4">
+            <div class="row g-4">
+                <hr class="border-light opacity-50 my-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small">
+                    <div class="jusfity-content text-center">
+                        <p class="mb-0">Mundo Animal</p>
+                    </div>
+                    <span>&copy; 2026 Mundo Animal. Todos os direitos reservados.</span>
+                    <span>Desenvolvido por <a href="https://www.github.com/raphael-henrique-dev" target="_blank" class="text-light text-decoration-underline">Raphael</a> & <a href="https://www.github.com/finpama" target="_blank" class="text-light text-decoration-underline">Pedro</a> </span>
+                 </div>
+            </div>
+        </div>
+    </footer>
+ 
+
+</body>
+</html>
